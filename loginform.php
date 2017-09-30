@@ -2,6 +2,10 @@
 
 session_start();
 $_SESSION['message']='';
+$_SESSION['username'] ='';
+$_SESSION['login'] ='';
+
+
 
 $dbname = 'storeproject';
 $dbuser = 'root';
@@ -16,14 +20,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	$username =$_POST['username'];
 	$password =$_POST['password'];
-	$_SESSION['username'] =$username;
 	$query = "SELECT username,password FROM user WHERE username ='$username' and password = '$password'";
 	$result = $connect->query($query);
 	$numRows = $result->num_rows;
 	if($numRows == 0)
+	{
 		$_SESSION['message']="Username or Password incorrect";
-	else
-		header("location:LoginWelcome.php");
+		$_SESSION['login'] ='fail';
+	}
+	else{
+			$_SESSION['username'] =$username;
+			$_SESSION['login'] ='succes';
+
+			header("location:LoginWelcome.php");
+
+		}
 }
 ?>
 

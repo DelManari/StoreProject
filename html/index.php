@@ -54,11 +54,19 @@ session_start();
  
                 </ul>
 				<?php	
-				if(isset($_SESSION['username'])){
-					echo "Hello:{ $_SESSION['username']}";
-				}
-				else{
-				?>
+				 if(isset($_SESSION['username'])){ ?>
+				<ul class="nav navbar-nav navbar-right" id="navvv">
+					<li>
+						<a href="#"><i><span>Welcome <?= $_SESSION['username']?></span>	</i></a>
+					</li>
+					<li>
+						<a href="..\logout.php"><i><span>Logout</span>	</i></a>
+
+					</li>
+				</ul>	
+				<?php
+				}else{
+				 ?>
 				<ul class="nav navbar-nav navbar-right" id="navvv">
 
 					<li>
@@ -74,10 +82,7 @@ session_start();
 					<li>
 				</li>
 				</ul>
-				<?php 
-				        }
-						echo $out;
-				?>
+				<?php } ?>
             </div>
         </div>
     </nav>
@@ -89,13 +94,8 @@ session_start();
                     <p style="    color:#e7e7e7;  font-weight:bold; text-align:left;" dir="ltr">
                         .Who Are You est un single des Who issu de l'album Who Are You, paru en 1978. Il parut comme un single avec double face A, avec la composition de John Entwistle Had Enough sur l'autre face.
                    
-				<?php	
-				if(isset($_SESSION['username'])){
-					echo "Hello:{ $_SESSION['username']}";
-				}
-				else{
-				?>
-				   </p>
+				
+				</p>
                 </div>
 
                 <div class="col-md-6">
@@ -125,5 +125,5 @@ session_start();
 </div>
 
 
-	</body>
+</body>
 </html>
