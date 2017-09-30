@@ -7,7 +7,7 @@
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	} 
-$sql = "CREATE DATABASE storeprojectc";
+$sql = "CREATE DATABASE storeproject";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {
@@ -16,7 +16,7 @@ if ($conn->query($sql) === TRUE) {
 
 
 
-    $sql = "use storeprojectc";
+    $sql = "use storeproject";
     $conn->query($sql);
 
 

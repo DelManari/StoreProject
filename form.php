@@ -15,25 +15,41 @@ if ($connect->connect_error) {
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-	//password confirmation
-	if($_POST['password'] == $_POST['confirmpassword']){
-		$username =$_POST['username'];
-		$email =$_POST['email'];
-		$password =$_POST['password'];
-		$_SESSION['username'] =$username;
-		$sql = "INSERT INTO user(username,password,email)"."VALUES('$username','$password','$email')";
-		//if the qury successful redirect to welcome page
-		if($connect->query($sql)==true){
-			$_SESSION['message']="Registration Succesful ! Added $username to the database";
-			header("location:welcome.php");
-		}else{
-			$_SESSION['message']="Registration Failed !";
+	
+		//password confirmation
+		if($_POST['password'] == $_POST['confirmpassword']){
+			$username =$_POST['username'];
+			$email =$_POST['email'];
+			$password =$_POST['password'];
+			$_SESSION['username'] =$username;
 
+			//email verification
+			        $query = "SELECT email FROM user WHERE email ='$email'";
+					$result = $connect->query($query);
+					$numRows = $result->num_rows;
+					if($numRows == 0)
+					{
+						$sql = "INSERT INTO user(username,password,email)"."VALUES('$username','$password','$email')";
+						//if the qury successful redirect to welcome page
+			
+						if($connect->query($sql)==true){
+							$_SESSION['message']="Registration Succesful ! Added $username to the database";
+							header("location:welcome.php");
+						}else{
+							$_SESSION['message']="Registration Failed !";
+
+						}
+					}
+					else{
+
+							$_SESSION['message']="Email Already Used";
+
+					}
 		}
-
-	}else{
+		else{
 		$_SESSION['message']="Passwords do not match !";
-	}
+			}
+	
 }
 ?>
 <head>
