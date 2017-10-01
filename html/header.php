@@ -25,12 +25,12 @@ session_start();
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="index.php">
                              <i class="glyphicon glyphicon-home"></i> Home
                         </a>
                     </li>	
                     <li>
-                        <a href="#">
+                        <a href="categorie.php">
                               <i class="glyphicon glyphicon-folder-open">  </i>  Category
                         </a>
                     </li>					
@@ -41,7 +41,7 @@ session_start();
 				 if(isset($_SESSION['username'])){ ?>
 				<ul class="nav navbar-nav navbar-right" id="navvv">
 					<li>
-						<a href="#"><i><span>Welcome <?= $_SESSION['username']?></span>	</i></a>
+						<a href="dashboard.php"><i><span>Welcome <?= $_SESSION['username']?></span>	</i></a>
 					</li>
 					<li>
 						<a href="..\logout.php"><i><span>Logout</span>	</i></a>

@@ -1,5 +1,6 @@
-    <footer class="navbar navbar-bottom " id="myfooter" style="	margin-top: -30px;">
-        <div class="container">
+   
+   <footer class="navbar navbar-bottom " id="myfooter" style=" height:170px">
+        <div class="container" >
             <div class="row">
                 <div class="col-md-6">
                     <h3>  <i class="glyphicon glyphicon-question-sign"></i>  who are we</h3>

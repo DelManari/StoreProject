@@ -22,7 +22,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 			$email =$_POST['email'];
 			$password =$_POST['password'];
 			$_SESSION['username'] =$username;
-
+			//username verification
+				$query = "SELECT username FROM user WHERE username ='$username'";
+				$result = $connect->query($query);
+				$numRows = $result->num_rows;
+				if($numRows == 0)
+				{
 			//email verification
 			        $query = "SELECT email FROM user WHERE email ='$email'";
 					$result = $connect->query($query);
@@ -45,6 +50,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 							$_SESSION['message']="Email Already Used";
 
 					}
+				}else{	
+						$_SESSION['message']="username Already Used";
+				}
 		}
 		else{
 		$_SESSION['message']="Passwords do not match !";

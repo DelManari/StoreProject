@@ -21,7 +21,7 @@ session_start();
 	$(function(){
 		$("#header").load("header.php");
 		$("#footer").load("footer.php");
-		$("#about").load("about.php");
+		$("#categorie").load("../categorieList.php");
 
 	});
 </script>
@@ -29,7 +29,7 @@ session_start();
 
 <body>
     <div id="header"></div>
-    <div id="about"></div>
+    <div id="categorie" style="margin:100px"></div>
     <div id="footer" ></div>
 
 

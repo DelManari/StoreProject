@@ -38,15 +38,14 @@ html,body{
     padding-top: 10px;
 }
 
-#myfooter{
-	position:relative;
-    background-color:cornflowerblue;
-    padding-top:10px;
-    font-family:sans-serif;
-    text-align:justify;
-	height:100px;
-	margin-top:-100px;
-	clear:both;
+#myfooter {
+	
+    position: relative;
+    background-color: cornflowerblue;
+    padding-top: 10px;
+    font-family: sans-serif;
+    text-align: justify;
+    clear: both;
 }
 #myfooter h3{
     text-align:left;
