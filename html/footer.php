@@ -1,5 +1,5 @@
    
-   <footer class="navbar navbar-bottom " id="myfooter" style=" height:170px">
+   <footer class="navbar navbar-bottom " id="myfooter" style="height: 175px;margin-top:200px;">
         <div class="container" >
             <div class="row">
                 <div class="col-md-6">
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </div>
-        <div class="subfooter" id="sub" style="margin-bottom:-20px;">
+        <div class="subfooter" id="sub" >
             <span>all rights reserved SHOP-2017</span>
         </div>
     </footer>

@@ -40,7 +40,9 @@ html,body{
 
 #myfooter {
 	
-    position: relative;
+    position: absolute;
+	bottom:0;
+    width: 100%;
     background-color: cornflowerblue;
     padding-top: 10px;
     font-family: sans-serif;
@@ -52,8 +54,8 @@ html,body{
     margin-bottom:20px;
 }
 #sub{
+    padding: 12px;
     background-color: darkblue;
-    padding: 10px;
     text-align: center;
     font-weight: bold;
     color: #e7e7e7;

@@ -29,8 +29,8 @@ session_start();
 
 <body>
     <div id="header"></div>
-    <div id="categorie" style="margin:100px"></div>
-    <div id="footer" ></div>
+    <div id="categorie"></div>
+    <div id="footer"></div>
 
 
 </body>
