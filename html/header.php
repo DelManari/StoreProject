@@ -35,7 +35,11 @@ session_start();
                               <i class="glyphicon glyphicon-folder-open">  </i>  Category
                         </a>
                     </li>					
-
+                    <li>
+                        <a href="product.php">
+                              <i class="glyphicon glyphicon-folder-open">  </i>  Products
+                        </a>
+                    </li>	
  
                 </ul>
 				<?php	
