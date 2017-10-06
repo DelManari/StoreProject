@@ -2,7 +2,6 @@
 
 session_start();
 $_SESSION['message']='';
-$_SESSION['username'] ='';
 $_SESSION['login'] ='';
 
 
@@ -18,6 +17,7 @@ if ($connect->connect_error) {
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
+
 	$username =$_POST['username'];
 	$password =$_POST['password'];
 	$query = "SELECT username,password FROM user WHERE username ='$username' and password = '$password'";
