@@ -21,7 +21,7 @@ session_start();
 	$(function(){
 		$("#header").load("header.php");
 		$("#footer").load("footer.php");
-		$("#products").load("products_added_by_user.php");
+		$("#categorie").load("loginform.php");
 
 	});
 </script>
@@ -29,7 +29,7 @@ session_start();
 
 <body>
     <div id="header"></div>
-    <div id="products"></div>
+    <div id="categorie"></div>
     <div id="footer"></div>
 
 

@@ -49,7 +49,7 @@ session_start();
 						<a href="dashboard.php"><i><span>Welcome <?= $_SESSION['username']?></span>	</i></a>
 					</li>
 					<li>
-						<a href="..\logout.php"><i><span>Logout</span>	</i></a>
+						<a href="logout.php"><i><span>Logout</span>	</i></a>
 
 					</li>
 				</ul>	
@@ -59,12 +59,12 @@ session_start();
 				<ul class="nav navbar-nav navbar-right" id="navvv">
 
 					<li>
-						<a href="..\loginform.php">
+						<a href="login.php">
 						 <i class="glyphicon glyphicon-user"></i> Login
 						</a>
 					</li>
 					<li>
-						<a href="..\form.php">
+						<a href="register.php">
 						 <i class="glyphicon glyphicon-lock"> </i> Register
 						</a>
 					</li>

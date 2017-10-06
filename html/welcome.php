@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css\Style.css">
+<link rel="stylesheet" type="text/css" href="..\css\Style.css">
 <?php session_start();?>
 <div class="body content">
 <div class="welcome">

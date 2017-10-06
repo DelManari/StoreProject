@@ -4,4 +4,4 @@ $_SESSION = array();
 session_destroy();
 ?>
 <span class="user">logout SUCCES</span>
-<?php 			header("location:html\index.php"); ?>
+<?php 			header("location:index.php"); ?>

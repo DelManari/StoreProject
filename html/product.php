@@ -21,7 +21,7 @@ session_start();
 	$(function(){
 		$("#header").load("header.php");
 		$("#footer").load("footer.php");
-		$("#product").load("../ProductsList.php");
+		$("#product").load("ProductsList.php");
 
 	});
 </script>
